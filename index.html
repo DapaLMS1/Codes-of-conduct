@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dental Assistant Codes of Conduct</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #ffffff; }
+        .modal-overlay {
+            visibility: hidden;
+            opacity: 0;
+            transition: opacity 0.3s ease, visibility 0.3s ease;
+        }
+        .modal-overlay.active {
+            visibility: visible;
+            opacity: 1;
+        }
+        .modal-content {
+            transform: scale(0.9);
+            transition: transform 0.3s ease;
+        }
+        .modal-overlay.active .modal-content {
+            transform: scale(1);
+        }
+        .deep-violet { color: #532A8C; }
+        .bg-deep-violet { background-color: #532A8C; }
+        .link-style {
+            color: #532A8C; /* Deep Violet for link text */
+            text-decoration: underline;
+            transition: color 0.15s;
+        }
+        .link-style:hover {
+            color: #3f1e68; /* Slightly darker violet on hover */
+        }
+    </style>
+</head>
+<body class="p-8">
+
+    <div class="max-w-4xl mx-auto">
+        <h1 class="text-3xl font-bold text-center mb-6 deep-violet">
+            Codes of Conduct and Practice Standards
+        </h1>
+        <p class="text-center text-gray-600 mb-8 max-w-2xl mx-auto">
+            While the Dental Board of Australia (DBA) Code of Conduct primarily targets registered practitioners, its principles apply to the conduct of all staff in a dental practice. Review the <strong>two sections</strong> below.
+        </p>
+
+        <!-- Main Buttons -->
+        <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-8">
+            <button onclick="openModal('keyAreasModal')"
+                    class="bg-deep-violet text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                Key Areas of Conduct
+            </button>
+            <button onclick="openModal('professionalResponsibilitiesModal')"
+                    class="bg-deep-violet text-white font-semibold py-4 px-8 rounded-xl shadow-lg hover:shadow-xl transition duration-300 transform hover:scale-105">
+                Professional Responsibilities
+            </button>
+        </div>
+    </div>
+
+    <!-- Modal 1: Key Areas of Conduct -->
+    <div id="keyAreasModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="modal-content bg-white rounded-xl shadow-2xl max-w-4xl w-full p-8 relative">
+            <button onclick="closeModal('keyAreasModal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-3xl font-light leading-none">&times;</button>
+            <h2 class="text-2xl font-bold mb-6 border-b pb-3 deep-violet">Section A: Key Areas of Conduct</h2>
+            
+            <div class="space-y-6">
+                <!-- 1. Confidentiality and Privacy -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Confidentiality and Privacy</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        Mandatory adherence to the <strong><a href="https://www.legislation.gov.au/C2004A03712/latest/text" target="_blank" class="link-style">Privacy Act 1988 (Cth)</a></strong> and state/territory health records legislation is required. Patient information (including clinical data, financial details, and personal conversations) must be protected. The principle is <strong>"need to know."</strong>
+                    </p>
+                </div>
+                
+                <!-- 2. Informed Consent -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Informed Consent</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        The assistant's role is critical in ensuring the process of consent is followed, including documenting discussions, answering non-clinical questions within their scope, and ensuring the patient has the opportunity to ask questions.
+                    </p>
+                </div>
+
+                <!-- 3. Professional Boundaries -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Professional Boundaries</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        Maintaining appropriate professional relationships with patients. This includes avoiding dual relationships and refraining from any personal or financial exploitation of the professional relationship.
+                    </p>
+                </div>
+
+                <!-- 4. Scope of Practice -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Working within Scope of Practice</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        Dental assistants must strictly adhere to the tasks and procedures they are trained, competent, and legally authorised to perform. Performing tasks outside of this scope (<strong>unauthorised practice</strong>) is a serious ethical and legal violation.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Modal 2: Professional Responsibilities -->
+    <div id="professionalResponsibilitiesModal" class="modal-overlay fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center p-4 z-50">
+        <div class="modal-content bg-white rounded-xl shadow-2xl max-w-4xl w-full p-8 relative">
+            <button onclick="closeModal('professionalResponsibilitiesModal')" class="absolute top-4 right-4 text-gray-500 hover:text-gray-900 text-3xl font-light leading-none">&times;</button>
+            <h2 class="text-2xl font-bold mb-6 border-b pb-3 deep-violet">Section B: Professional Responsibilities</h2>
+            
+            <div class="space-y-6">
+                <!-- 1. Infection Control -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Infection Control</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        Strict compliance with the current <strong><a href="https://www.safetyandquality.gov.au/our-work/infection-prevention-and-control/australian-guidelines-prevention-and-control-infection-healthcare" target="_blank" class="link-style">Australian Guidelines for the Prevention and Control of Infection in Healthcare</a></strong> is non-negotiable and a critical component of non-maleficence and duty of care.
+                    </p>
+                </div>
+                
+                <!-- 2. Accurate Documentation -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Accurate Documentation</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        All actions, patient observations, and communications must be recorded contemporaneously, accurately, and legibly.
+                    </p>
+                </div>
+
+                <!-- 3. Cultural Safety -->
+                <div>
+                    <h3 class="font-semibold text-lg text-gray-800 mb-2">Cultural Safety</h3>
+                    <p class="text-gray-600 pl-4 border-l-4 border-deep-violet">
+                        Practising in a way that respects and is sensitive to the cultural identity of patients, addressing power imbalances, and advocating against discrimination.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function openModal(id) {
+            document.getElementById(id).classList.add('active');
+            document.body.style.overflow = 'hidden'; // Prevent scrolling background
+        }
+
+        function closeModal(id) {
+            document.getElementById(id).classList.remove('active');
+            document.body.style.overflow = 'auto'; // Restore scrolling
+        }
+
+        // Close modal when clicking outside the content
+        document.querySelectorAll('.modal-overlay').forEach(overlay => {
+            overlay.addEventListener('click', function(e) {
+                if (e.target === overlay) {
+                    closeModal(overlay.id);
+                }
+            });
+        });
+    </script>
+
+</body>
+</html>
